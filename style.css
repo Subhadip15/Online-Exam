@@ -1,0 +1,494 @@
+:root {
+    --background-color: #f4f4f9;
+    --text-color: #333;
+    --header-background: #4f0a6d;
+    --section-background: #fff;
+    --section-border-color: #ccc;
+    --button-background: #3d56e9d6;
+    --button-hover: #6779ded6;
+}
+
+
+.dark-theme {
+    background-color: #121212;
+    color: #fff;
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --header-background: #1e1e1e;
+    --section-background: #292929;
+    --section-border-color: #444;
+    --button-background: #4CAF50;
+    --button-hover: #66bb6a;
+}
+
+button {
+    background-color: var(--button-background);
+    color: #fff;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #f0f4ff, #dbeafe);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    flex-direction: column;
+}
+
+/* ---------------------------- Header part Start --------------------------*/
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 25px;
+    background-color: #4f0a6d;
+}
+
+header h1 {
+    color: white;
+    padding: 1px 0;
+}
+
+.c h3 {
+    margin: 30px 10px 5px 100px;
+    color: white;
+    padding: 1px 0;
+}
+
+#clockc {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#icon {
+    width: 23px;
+    margin: 0px 15px;
+    cursor: pointer;
+}
+/* ---------------------------- Header part End --------------------------*/
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 3rem;
+}
+
+.card {
+    background: linear-gradient(135deg, #ffffff, #f8fafc);
+    border-left: 6px solid #1e3a8a;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #1e3a8a;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #4b5563;
+    margin: 1rem 0;
+}
+
+.card a {
+    margin-top: auto;
+    background-color: #1e3a8a;
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.card a:hover {
+    background-color: #374fc7;
+}
+
+.support {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.support h3 {
+    font-size: 1.5rem;
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+}
+
+.support p {
+    font-size: 1rem;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.support p i {
+    margin-right: 0.5rem;
+    color: #1e3a8a;
+}
+
+
+.new {
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #e3d9d9;
+}
+
+/* ---------------------------- Student login part Start --------------------------*/
+.headl {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #4f0a6d;
+}
+
+/* Overlay */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* Semi-transparent black */
+    z-index: 999;
+    /* Above main content but below popup */
+    display: none;
+    /* Initially hidden */
+}
+
+/* Show overlay */
+#overlay.show {
+    display: block;
+}
+
+#close-student-popup {
+    font-size: 2em;
+    cursor: pointer;
+    color: #ffffff;
+    text-align: right;
+    margin: 0 15px 0 0;
+}
+
+#student-login-form {
+    padding: 10px 25px 5px;
+}
+
+/* ---------------------------- Student login part End --------------------------*/
+
+
+/* ---------------------------- Teacher Signup part Start --------------------------*/
+#overlayy {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* Semi-transparent black */
+    z-index: 999;
+    /* Above main content but below popup */
+    display: none;
+    /* Initially hidden */
+}
+
+#overlayy.show {
+    display: block;
+}
+
+#signup-form {
+    padding: 10px 25px 5px;
+}
+
+#close-signup-popup {
+    font-size: 2em;
+    cursor: pointer;
+    color: #ffffff;
+    text-align: right;
+    margin: 0 15px 0 0;
+}
+
+#teacher-login-form {
+    padding: 10px 25px 5px;
+}
+
+#teacher-signup-form {
+    padding: 10px 25px 5px;
+}
+
+#close-teacher-popup {
+    font-size: 2em;
+    cursor: pointer;
+    color: #ffffff;
+    text-align: right;
+    margin: 0 15px 0 0;
+}
+
+.or {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.icons {
+    text-align: center;
+}
+
+.icons i {
+    color: #007bff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 2px solid #dfe9f5;
+    margin: 0px 15px;
+    transition: 1s;
+}
+
+.icons i:hover {
+    background-color: #07001f;
+}
+
+/* ---------------------------- Teacher Signup part End --------------------------*/
+
+
+/* ---------------------------- Popup part Start --------------------------*/
+.popup {
+    position: fixed;
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffffed;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 585px;
+    padding: 0px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.popup-content {
+    position: relative;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.popup.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+    transition: opacity 0.3s ease, visibility 0s linear 0s;
+}
+
+.popup h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5em;
+    margin: 5px;
+    margin-left: 20px;
+    text-align: center;
+    color: #fff8f8;
+}
+
+/* Input fields */
+.popup label {
+    font-family: 'Arial', sans-serif;
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.popup input[type="email"],
+.popup input[type="text"],
+.popup input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.popup input[type="email"]:focus,
+.popup input[type="text"]:focus,
+.popup input[type="password"]:focus {
+    border-color: #ddddddbc;
+    outline: none;
+    box-shadow: 0 0 3px #ddddddbc;
+}
+
+.popup button {
+    width: 25%;
+    padding: 10px;
+    margin: 10px 1%;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.popup button[type="submit"] {
+    background-color: #3d56e9d6;
+}
+
+.popup button[type="submit"]:hover {
+    background-color: #6779ded6;
+}
+
+/* Forgot password link */
+.popup .forgot-password {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.popup .sign {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.popup .forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* ---------------------------- Popup part End --------------------------*/
+
+
+
+
+/* ---------------------------- links part Start --------------------------*/
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 6rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.links button {
+    color: blue;
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.links button:hover {
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+/* ---------------------------- links part End --------------------------*/
+
+/* ---------------------------- loading part Start --------------------------*/
+
+
+.loading-bar {
+    height: 2px;
+    width: 0;
+    background-color: #007bff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 2s;
+    /* Smooth animation */
+    overflow: hidden;
+}
+
+
+
+.loading-bar.loading {
+    width: 100%;
+}
+
+#top-loading-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background-color: #3498db;
+    display: none;
+    transition: width 2s ease, display 0s 2s;
+    z-index: 1000;
+}
+
+/* ---------------------------- loading part End --------------------------*/
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
